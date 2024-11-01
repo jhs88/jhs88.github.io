@@ -16,9 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
-    "bootstrap": "^5.3.3",
-    "jquery": "3.7.1",
-    "jquery.easing": "^1.4.1"
+    "bootstrap": "^5.3.3"
   },
   "devDependencies": {
     "browser-sync": "^3.0.3",
