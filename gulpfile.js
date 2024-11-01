@@ -46,7 +46,7 @@ function browserSyncReload(done) {
 
 // Clean vendor
 function clean() {
-  return del(['./vendor/', './css/*.min.css', './js/*.min.js']);
+  return del(['./vendor/', './css/', './js/*.min.js']);
 }
 
 // Bring third party dependencies from node_modules into vendor directory
