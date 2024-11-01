@@ -39,8 +39,7 @@ jobs:
         run: |
           npm ci
           npm run build
-          rm -rf .git .github node_modules scss gulpfile.js \ 
-          package.json package-lock.json README.md
+          rm -rf .git .github node_modules scss gulpfile.js package.json package-lock.json README.md
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
