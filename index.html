@@ -12,15 +12,14 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
+  <!-- Font Awesome -->
+  <script src="vendor/fontawesome-free/js/all.min.js"></script>
+
   <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-    rel="stylesheet" />
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-  <!-- <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet"> -->
-  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
   <link href="css/styles.min.css" rel="stylesheet" />
@@ -69,8 +68,8 @@
   <!-- Body -->
   <div class="container-fluid p-0">
     <!-- About Me -->
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-      <div class="my-auto">
+    <section class="resume-section" id="about">
+      <div class="resume-section-content">
         <h1 class="mb-0">
           Joseph
           <span class="text-primary">Scherreik</span>
@@ -85,34 +84,23 @@
           want to learn more about engineering and design in software systems.
         </p>
 
-        <ul class="list-inline list-social-icons mb-0">
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/josephscherreik/">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://github.com/jhs88">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
+        <div class="social-icons">
+          <a class="social-icon" href="https://www.linkedin.com/in/josephscherreik/">
+              <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a class="social-icon" href="https://github.com/jhs88/">
+              <i class="fab fa-github"></i>
+          </a>
+        </div>
       </div>
     </section>
-
+    <hr class="m-0" />
     <!-- Experience -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-      <div class="my-auto">
+    <section class="resume-section" id="experience">
+      <div class="resume-section-content">
         <h2 class="mb-5">Experience</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Technical Developer</h3>
             <div class="subheading mb-3"></div>
             <p>
@@ -121,13 +109,13 @@
               Utilize innovative technologies to enhance user experience and drive project success.
             </p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">September 2022 - Present</span>
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Software Engineer</h3>
             <div class="subheading mb-3">Lula Delivery</div>
             <p>
@@ -138,13 +126,13 @@
               RDS, AppSync, and Lambda.
             </p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">June 2020 - September 2020</span>
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Software Engineer</h3>
             <div class="subheading mb-3">VyB Technologies LLC.</div>
             <p>
@@ -156,13 +144,13 @@
               development sprints.
             </p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">March 2020 - May 2020</span>
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Junior Developer</h3>
             <div class="subheading mb-3">Drexel IT</div>
             <p>
@@ -174,28 +162,28 @@
               sprints.
             </p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">March 2019 - September 2019</span>
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Volunteer</h3>
             <div class="subheading mb-3">Drexel Excite Center</div>
             <p>
-              Assisted development and debuging of iOS applications weekly in
+              Assisted development and debugging of iOS applications weekly in
               the ExCITe Center's App Lab.<br />
               Learned to work with Swift and XCode.
             </p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">January 2018 - June 2018</span>
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Volunteer</h3>
             <div class="subheading mb-3">Camp NoBeBoSco</div>
             <p>
@@ -205,20 +193,20 @@
               Help in kitchen to feed over 200 scouts and leaders.
             </p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">Summer 2018 - Present</span>
           </div>
         </div>
       </div>
     </section>
-
+    <hr class="m-0" />
     <!-- Projects -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-      <div class="my-auto">
+    <section class="resume-section" id="projects">
+      <div class="resume-section-content">
         <h2 class="mb-5">Projects</h2>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Senior Design</h3>
             <div class="subheading mb-3">
               <a href="https://cci.drexel.edu/SeniorDesign/2021_2022/BASEBALL_CARD_CATALOGUE/index.html">Drexel
@@ -235,17 +223,17 @@
             <a href="https://github.com/jhs88/School-CS">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
               </span>
             </a>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">Fall 2021 - Spring 2022</span>
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Freshman Design</h3>
             <div class="subheading mb-3">
               <a href="https://drexel.edu/excite/">ExCITe Center at Drexel University</a>
@@ -260,54 +248,52 @@
             <a href="https://github.com/jhs88/hubo-yaml/">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
               </span>
             </a>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">Apr 2018 - Jun 2018</span>
           </div>
         </div>
       </div>
     </section>
-
+    <hr class="m-0" />
     <!-- Education -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-      <div class="my-auto">
+    <section class="resume-section" id="education">
+      <div class="resume-section-content">
         <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Drexel University</h3>
             <div class="subheading mb-3">Bachelor of Science</div>
             <div class="subheading mb-3">Philadelphia, PA</div>
             <div>BS in Software Engineering</div>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">June 2017 - Present</span>
           </div>
         </div>
 
         <div class="resume-item d-flex flex-column flex-md-row">
-          <div class="resume-content mr-auto">
+          <div class="flex-grow-1">
             <h3 class="mb-0">Northern Highlands Regional High School</h3>
             <div class="subheading mb-3">Allendale, NJ</div>
             <p>GPA: 3.75</p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="flex-strink-0">
             <span class="text-primary">September 2014 - June 2017</span>
           </div>
         </div>
       </div>
     </section>
-
+    <hr class="m-0" />
     <!-- Programming -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-      <div class="my-auto">
+    <section class="resume-section" id="skills">
+      <div class="resume-section-content">
         <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline list-icons dev-icons">
+        <div class="subheading mb-3">Programming Languages & Tools</div>
+        <ul class="list-inline dev-icons">
           <li class="list-inline-item">
             <i class="devicon-java-plain-wordmark"></i>
           </li>
@@ -388,14 +374,14 @@
         </p>
       </div>
     </section>
-
+    <hr class="m-0" />
     <!-- Interests -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-      <div class="my-auto">
+    <section class="resume-section" id="interests">
+      <div class="resume-section-content">
         <h2 class="mb-5">Interests</h2>
         <p>
           In my free time I enjoy learning different languages, tinkering with
-          Linux, and working on diffrent projects to challege myself. I have
+          Linux, and working on different projects to challenge myself. I have
           been working with Docker a lot recently and I very interested in
           learning how to use it more in my development. I'm currently working
           on a homelab based on a Raspberry Pi to teach myself DevOps,
@@ -405,16 +391,16 @@
           de-Google myself and my workflow. With this project, I intend to
           reach this goal.
           <br /><br />
-          I'm casual gamer and have always been interested in PC enthusist
+          I'm casual gamer and have always been interested in PC enthusiast
           hardware. I'm active in the online communities in this hobby. I find
-          it enjoyable to learn about the latest and greatest techology
+          it enjoyable to learn about the latest and greatest technology
           available. I built my first PC when I got to college. Since then, my
           friends and family asked me to guide them in building their own
           PCs.
           <br /><br />
           Apart from my interest in computers, I enjoy most of my time being
           outdoors. My love for the outdoors came from my time as a Boy Scout.
-          I eared the rank of Eagle Scout when I was 17 years old. My favorate
+          I eared the rank of Eagle Scout when I was 17 years old. My favorite
           outdoor activities include boating, hiking, and camping.<br /><br />
           I taught myself guitar in high school. I love playing all different
           kinds of music. Music has always been an important part of my life.
@@ -423,8 +409,9 @@
     </section>
 
     <!-- Awards
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-        <div class="my-auto">
+      <hr class="m-0" />
+      <section class="resume-section" id="awards">
+        <div class="resume-section-content">
           <h2 class="mb-5">Awards &amp; Certifications</h2>
           <ul class="fa-ul mb-0">
                     <li>
@@ -479,7 +466,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
