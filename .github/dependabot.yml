@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/' # Location of package manifests
+    schedule:
+      interval: 'weekly'
+    groups:
+      dependencies:
+        patterns:
+          - '@fortawesome/fontawesome-free'
+          - 'bootstrap'
+          - 'jquery*'
+          - 'popper.js'
+      dev-dependencies:
+        patterns:
+          - 'browser-sync'
+          - 'gulp*'
+          - 'merge-stream'
+          - 'prettier'
