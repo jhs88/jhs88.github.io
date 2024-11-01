@@ -30,10 +30,11 @@
     "gulp-header": "~2.0.9",
     "gulp-plumber": "~1.2.1",
     "gulp-rename": "~1.4.0",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "~5.1.0",
     "gulp-uglify": "3.0.2",
     "merge-stream": "^2.0.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "sass": "^1.80.5"
   },
   "browserslist": [
     "last 2 versions",
@@ -41,6 +42,6 @@
     "not ie <= 11"
   ],
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   }
 }

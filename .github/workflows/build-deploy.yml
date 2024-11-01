@@ -26,9 +26,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -37,19 +37,20 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm ci
+          npm ci 
           npm run build
-          rm -rf .git .github node_modules scss gulpfile.js package.json package-lock.json README.md
+          rm -rf .git .github .gitignore .prettierc LICENSE node_modules 
+          rm -rf scss gulpfile.js package.json package-lock.json README.md
 
-      - name: Setup Pages
+      - name: Setup Pages 📄
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Upload artifact 🚀
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: '.'
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages 🚀
         id: deployment
         uses: actions/deploy-pages@v4
