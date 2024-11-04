@@ -66,7 +66,7 @@ function modules() {
   var particles = gulp
     .src('./node_modules/particles.js/particles.js')
     .pipe(gulp.dest('./vendor'));
-  return merge(bootstrap, popper, fontAwesome, particles);
+  return merge(bootstrap, fontAwesome, particles);
 }
 
 // CSS task
