@@ -55,11 +55,18 @@ function modules() {
   var bootstrap = gulp
     .src('./node_modules/bootstrap/dist/**/*')
     .pipe(gulp.dest('./vendor/bootstrap'));
+  // Popper
+  // var popper = gulp
+  //   .src('./node_modules/@popperjs/core/dist/umd/**/*')
+  //   .pipe(gulp.dest('./vendor/popper'));
   // Font Awesome
   var fontAwesome = gulp
     .src('./node_modules/@fortawesome/**/*')
     .pipe(gulp.dest('./vendor'));
-  return merge(bootstrap, fontAwesome);
+  var particles = gulp
+    .src('./node_modules/particles.js/particles.js')
+    .pipe(gulp.dest('./vendor'));
+  return merge(bootstrap, popper, fontAwesome, particles);
 }
 
 // CSS task
@@ -113,7 +120,7 @@ function js() {
 // Watch files
 function watchFiles() {
   gulp.watch('./scss/**/*', css);
-  gulp.watch('./js/**/*', js);
+  gulp.watch(['./js/**/*.js', '!./js/**/*.min.js'], js);
   gulp.watch('./**/*.html', browserSyncReload);
 }
 
