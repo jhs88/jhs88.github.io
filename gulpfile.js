@@ -52,20 +52,14 @@ function clean() {
 // Bring third party dependencies from node_modules into vendor directory
 function modules() {
   // Bootstrap
-  var bootstrap = gulp
-    .src('node_modules/bootstrap/dist/**/*')
-    .pipe(gulp.dest('vendor/bootstrap'));
+  var bootstrap = gulp.src('node_modules/bootstrap/dist/**/*').pipe(gulp.dest('vendor/bootstrap'));
   // Popper
   // var popper = gulp
   //   .src('node_modules/@popperjs/core/dist/umd/**/*')
   //   .pipe(gulp.dest('vendor/popper'));
   // Font Awesome
-  var fontAwesome = gulp
-    .src('node_modules/@fortawesome/**/*')
-    .pipe(gulp.dest('vendor'));
-  var particles = gulp
-    .src('node_modules/particles.js/particles.js')
-    .pipe(gulp.dest('vendor'));
+  var fontAwesome = gulp.src('node_modules/@fortawesome/**/*').pipe(gulp.dest('vendor'));
+  var particles = gulp.src('node_modules/particles.js/particles.js').pipe(gulp.dest('vendor'));
   return merge(bootstrap, fontAwesome, particles);
 }
 

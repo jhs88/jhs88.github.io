@@ -9,21 +9,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Collapse responsive navbar when toggler is visible
   var navbarToggler = document.body.querySelector('.navbar-toggler');
-  var responsiveNavItems = [].slice.call(
-    document.querySelectorAll('#navbarResponsive .nav-link')
-  );
+  var responsiveNavItems = [].slice.call(document.querySelectorAll('#navbarResponsive .nav-link'));
   responsiveNavItems.map(function (responsiveNavItem) {
     responsiveNavItem.addEventListener('click', function () {
-      if (window.getComputedStyle(navbarToggler).display !== 'none')
-        navbarToggler.click();
+      if (window.getComputedStyle(navbarToggler).display !== 'none') navbarToggler.click();
     });
   });
 });
 
-window.particlesJS.load(
-  'particles-js',
-  'assets/particlesjs-config.json',
-  function () {
-    console.log('callback - particles.js config loaded');
-  }
-);
+window.particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
+  console.log('callback - particles.js config loaded');
+});
