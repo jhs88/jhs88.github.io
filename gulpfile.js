@@ -31,7 +31,7 @@ const banner = [
 function browserSync(done) {
   browsersync.init({
     server: {
-      baseDir: './'
+      baseDir: '.'
     },
     port: 3000
   });
@@ -46,38 +46,38 @@ function browserSyncReload(done) {
 
 // Clean vendor
 function clean() {
-  return del(['./vendor/', './css/', './js/*.min.js']);
+  return del(['vendor', 'css', 'js/*.min.js']);
 }
 
 // Bring third party dependencies from node_modules into vendor directory
 function modules() {
   // Bootstrap
   var bootstrap = gulp
-    .src('./node_modules/bootstrap/dist/**/*')
-    .pipe(gulp.dest('./vendor/bootstrap'));
+    .src('node_modules/bootstrap/dist/**/*')
+    .pipe(gulp.dest('vendor/bootstrap'));
   // Popper
   // var popper = gulp
-  //   .src('./node_modules/@popperjs/core/dist/umd/**/*')
-  //   .pipe(gulp.dest('./vendor/popper'));
+  //   .src('node_modules/@popperjs/core/dist/umd/**/*')
+  //   .pipe(gulp.dest('vendor/popper'));
   // Font Awesome
   var fontAwesome = gulp
-    .src('./node_modules/@fortawesome/**/*')
-    .pipe(gulp.dest('./vendor'));
+    .src('node_modules/@fortawesome/**/*')
+    .pipe(gulp.dest('vendor'));
   var particles = gulp
-    .src('./node_modules/particles.js/particles.js')
-    .pipe(gulp.dest('./vendor'));
+    .src('node_modules/particles.js/particles.js')
+    .pipe(gulp.dest('vendor'));
   return merge(bootstrap, fontAwesome, particles);
 }
 
 // CSS task
 function css() {
   return gulp
-    .src('./scss/**/*.scss')
+    .src('scss/**/*.scss')
     .pipe(plumber())
     .pipe(
       sass({
         outputStyle: 'expanded',
-        includePaths: './node_modules'
+        includePaths: ['node_modules']
       })
     )
     .on('error', sass.logError)
@@ -87,21 +87,21 @@ function css() {
         pkg: pkg
       })
     )
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('css'))
     .pipe(
       rename({
         suffix: '.min'
       })
     )
     .pipe(cleanCSS())
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('css'))
     .pipe(browsersync.stream());
 }
 
 // JS task
 function js() {
   return gulp
-    .src(['./js/*.js', '!./js/*.min.js'])
+    .src(['js/*.js', '!js/*.min.js'])
     .pipe(uglify())
     .pipe(
       header(banner, {
@@ -113,15 +113,15 @@ function js() {
         suffix: '.min'
       })
     )
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('js'))
     .pipe(browsersync.stream());
 }
 
 // Watch files
 function watchFiles() {
-  gulp.watch('./scss/**/*', css);
-  gulp.watch(['./js/**/*.js', '!./js/**/*.min.js'], js);
-  gulp.watch('./**/*.html', browserSyncReload);
+  gulp.watch('scss/**/*', css);
+  gulp.watch(['js/**/*.js', '!js/**/*.min.js'], js);
+  gulp.watch('**/*.html', browserSyncReload);
 }
 
 // Define complex tasks

@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
   // Activate Bootstrap scrollspy on the main nav element
   var sideNav = document.body.querySelector('#sideNav');
   if (sideNav)
-    new bootstrap.ScrollSpy(document.body, {
+    new this.window.bootstrap.ScrollSpy(document.body, {
       target: '#sideNav',
       rootMargin: '0px 0px -40%'
     });
@@ -14,12 +14,16 @@ window.addEventListener('DOMContentLoaded', function () {
   );
   responsiveNavItems.map(function (responsiveNavItem) {
     responsiveNavItem.addEventListener('click', function () {
-      if (window.getComputedStyle(navbarToggler).display !== 'none') 
+      if (window.getComputedStyle(navbarToggler).display !== 'none')
         navbarToggler.click();
     });
   });
 });
 
-particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+window.particlesJS.load(
+  'particles-js',
+  'assets/particlesjs-config.json',
+  function () {
+    console.log('callback - particles.js config loaded');
+  }
+);
