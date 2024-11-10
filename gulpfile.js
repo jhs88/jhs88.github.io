@@ -57,10 +57,22 @@ function modules() {
   // var popper = gulp
   //   .src('node_modules/@popperjs/core/dist/umd/**/*')
   //   .pipe(gulp.dest('vendor/popper'));
+  // jQuery Easing
+  var jqueryEasing = gulp
+    .src('node_modules/jquery.easing/*.js')
+    .pipe(gulp.dest('vendor/jquery-easing'));
+  // jQuery
+  var jquery = gulp
+    .src([
+      'node_modules/jquery/dist/*',
+      '!node_modules/jquery/dist/core.js'
+    ])
+    .pipe(gulp.dest('vendor/jquery'));
   // Font Awesome
   var fontAwesome = gulp.src('node_modules/@fortawesome/**/*').pipe(gulp.dest('vendor'));
+  // Particles.js
   var particles = gulp.src('node_modules/particles.js/particles.js').pipe(gulp.dest('vendor'));
-  return merge(bootstrap, fontAwesome, particles);
+  return merge(bootstrap, fontAwesome, jquery, jqueryEasing, particles);
 }
 
 // CSS task
