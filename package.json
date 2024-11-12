@@ -22,7 +22,7 @@
   "devDependencies": {
     "browser-sync": "^3.0.3",
     "del": "6.1.1",
-    "eslint": "~8.57.1",
+    "eslint": "~9.14.0",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "8.0.0",
     "gulp-clean-css": "~4.3.0",
